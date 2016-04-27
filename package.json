@@ -1,0 +1,22 @@
+{
+  "name": "leads",
+  "description":"Collect information from an advertisement",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bundle exec ruby bot.rb",
+    "install": "bundle install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http:\/\/www.github.com\/greenbot\/leads_bot"
+  },
+  "keywords": [
+    "green-bot",
+    "greenbot",
+    "bot",
+    "bashbot"
+  ],
+  "author": "Pavlo Sirous",
+  "license": "MIT",
+  "version": "0.1.0"
+}

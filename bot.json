@@ -1,0 +1,53 @@
+[{
+  "default_cmd": "npm start",
+  "default_path": ".\/node_modules\/leads",
+  "default_settings": [
+
+    {
+      "name": "CONFIRMATION_PROMPT",
+      "value": "Would you like someone to contact you?",
+      "type": "text"
+    },
+    {
+      "name": "NAME_PROMPT",
+      "value": "Who should we ask for?",
+      "type": "text"
+    },
+    {
+      "name": "OTHER_CONTACT_CONFIRM",
+      "value": "Is there another way you would like to be contacted?",
+      "type": "text"
+    },
+    {
+      "name": "OTHER_CONTACT_PROMPT",
+      "value": "How else would you like to be contacted?",
+      "type": "text"
+    },
+    {
+      "name": "NOTE_PROMPT",
+      "value": "Please tell us how we can help. Send a single Q to quit",
+      "type": "text"
+    },
+    {
+      "name": "PROMPT_1",
+      "value": "Change me to change prompt 1",
+      "type": "text"
+    },
+    {
+      "name": "PROMPT_2",
+      "value": "Change me to change prompt 2",
+      "type": "text"
+    },
+    {
+      "name": "SIGNATURE",
+      "value": "Thank you, you can visit us on the web at http://www.green-bot.com",
+      "type": "text"
+    }
+  ],
+  "desc": "Collect information from an advertisement",
+  "icon_class": "information",
+  "name": "leads"
+  "owner_cmd": "",
+  "short_desc": "Collect information from an advertisement",
+  "repo_link": "http:\/\/www.github.com\/greenbot\/leads_bot"
+}]
