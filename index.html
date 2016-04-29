@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>bot.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>bot.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">#!/usr/bin/env ruby</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">require</span> <span class="hljs-string">'./lib/greenbot.rb'</span>
+
+CONFIRMATION_PROMPT = ENV[<span class="hljs-string">'CONFIRMATION_PROMPT'</span>] <span class="hljs-params">||</span> <span class="hljs-string">'Would you like someone to contact you?'</span>
+NAME_PROMPT = ENV[<span class="hljs-string">'NAME_PROMPT'</span>] <span class="hljs-params">||</span> <span class="hljs-string">'Who should we ask for?'</span>
+OTHER_CONTACT_CONFIRM = ENV[<span class="hljs-string">'OTHER_CONTACT_CONFIRM'</span>] <span class="hljs-params">||</span> <span class="hljs-string">'Is there another way you would like to be contacted?'</span>
+OTHER_CONTACT_PROMPT = ENV[<span class="hljs-string">'OTHER_CONTACT_PROMPT'</span>] <span class="hljs-params">||</span> <span class="hljs-string">'How else would you like to be contacted?'</span>
+NOTE_PROMPT = ENV[<span class="hljs-string">'NOTE_PROMPT'</span>] <span class="hljs-params">||</span> <span class="hljs-string">'Please tell us how we can help. Send a single Q to quit'</span>
+
+tell ENV[<span class="hljs-string">'PROMPT_1'</span>]
+tell ENV[<span class="hljs-string">'PROMPT_2'</span>]
+<span class="hljs-keyword">if</span> confirm(CONFIRMATION_PROMPT)
+  confirmed = <span class="hljs-literal">true</span>
+  confirmed.remember(<span class="hljs-string">'confirmed'</span>)
+  name = ask(NAME_PROMPT)
+  name.remember(<span class="hljs-string">'name'</span>)
+  <span class="hljs-keyword">if</span> confirm(OTHER_CONTACT_CONFIRM)
+    other_contact = ask(OTHER_CONTACT_PROMPT)
+    other_contact.remember(<span class="hljs-string">'other_contact'</span>)
+  <span class="hljs-keyword">end</span>
+  issue = note(NOTE_PROMPT)
+  issue.remember(<span class="hljs-string">'note'</span>)
+<span class="hljs-keyword">else</span>
+  tell(<span class="hljs-string">'No problem at all.'</span>)
+<span class="hljs-keyword">end</span>
+tell ENV[<span class="hljs-string">'SIGNATURE'</span>]</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
