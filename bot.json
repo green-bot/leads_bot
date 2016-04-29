@@ -46,7 +46,7 @@
   ],
   "desc": "Collect information from an advertisement",
   "icon_class": "information",
-  "name": "leads"
+  "name": "leads",
   "owner_cmd": "",
   "short_desc": "Collect information from an advertisement",
   "repo_link": "http:\/\/www.github.com\/greenbot\/leads_bot"
